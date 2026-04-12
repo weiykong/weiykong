@@ -54,6 +54,6 @@ Today I enjoy working at the intersection of:
 ## 📊 GitHub Stats
 
 <p align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=weiykong&show_icons=true&theme=transparent" height="150"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=weiykong&layout=compact&theme=transparent" height="150"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=weiykong&theme=default" height="150"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=weiykong&theme=default" height="150"/>
 </p>
