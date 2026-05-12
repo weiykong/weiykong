@@ -8,6 +8,7 @@ I build tools that turn complex scientific images into reliable, measurable data
 My background is in **biophysics and quantitative imaging**, where I worked on extracting mechanical and morphological information from microscopy experiments. Over time, I became increasingly interested in the engineering side of science: building robust pipelines, automating analysis workflows, validating results, and turning research methods into reusable software.
 
 Today, I work mainly at the intersection of:
+
 🤖 **Applied AI & automation**
 🔬 **Scientific imaging**  
 👁️ **Computer vision**  
