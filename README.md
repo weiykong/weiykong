@@ -9,7 +9,7 @@ My background is in **biophysics and quantitative imaging**, where I worked on e
 
 Today, I work mainly at the intersection of:
 
-🤖 **Applied AI & automation**
+🤖 **Applied AI & automation**  
 🔬 **Scientific imaging**  
 👁️ **Computer vision**  
 📊 **Quantitative analysis**  
