@@ -1,14 +1,14 @@
 # Hi, I'm Weiyuan 👋
 
-### Computer Vision & Scientific Imaging Engineer  
-_PhD in biophysics · image analysis · quantitative microscopy · scientific software_
+### Computer Vision, Scientific Imaging & Applied AI Engineer
+_PhD in biophysics · image analysis · quantitative microscopy · scientific software · AI-assisted workflows_
 
 I build tools that turn complex scientific images into reliable, measurable data.
 
 My background is in **biophysics and quantitative imaging**, where I worked on extracting mechanical and morphological information from microscopy experiments. Over time, I became increasingly interested in the engineering side of science: building robust pipelines, automating analysis workflows, validating results, and turning research methods into reusable software.
 
 Today, I work mainly at the intersection of:
-
+🤖 **Applied AI & automation**
 🔬 **Scientific imaging**  
 👁️ **Computer vision**  
 📊 **Quantitative analysis**  
@@ -35,7 +35,7 @@ Configurable PyTorch U-Net pipeline for biological image segmentation, with trai
 ---
 
 ## What I enjoy building
-
+- **AI-assisted workflows** using LLMs, APIs and automation to make scientific and technical work faster
 - **Image analysis pipelines** for microscopy, biological imaging and visual datasets
 - **Computer vision tools** for segmentation, tracking, registration and quality control
 - **Scientific software** that turns research methods into reusable packages
