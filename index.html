@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weiyuan Kong</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #21262d;
+      --accent: #58a6ff;
+      --accent2: #3fb950;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --pill-bg: #1f2937;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      margin-bottom: 56px;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1f6feb 0%, #3fb950 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      flex-shrink: 0;
+      border: 2px solid var(--border);
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    .hero-text .tagline {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 520px;
+    }
+
+    .hero-text .location {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 10px;
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+
+    /* ── Intersection pills ── */
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 56px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--pill-bg);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: border-color 0.2s;
+    }
+
+    .pill:hover { border-color: var(--accent); }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 52px;
+    }
+
+    section h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Cards ── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* ── Stack tags ── */
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 4px 12px;
+      font-size: 0.83rem;
+      color: var(--text);
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    }
+
+    /* ── Quote ── */
+    blockquote {
+      border-left: 3px solid var(--accent);
+      padding: 16px 24px;
+      background: var(--surface);
+      border-radius: 0 8px 8px 0;
+      color: var(--muted);
+      font-size: 1rem;
+      font-style: italic;
+    }
+
+    blockquote strong {
+      color: var(--text);
+    }
+
+    /* ── Stats ── */
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .stats img {
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      height: 150px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .hero { flex-direction: column; align-items: flex-start; gap: 20px; }
+      .hero-text h1 { font-size: 1.6rem; }
+      .card-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="avatar">🧬</div>
+      <div class="hero-text">
+        <h1>Weiyuan Kong</h1>
+        <p class="tagline">Scientist turned engineer interested in building tools to explore complex data.</p>
+        <span class="location">📍 Strasbourg, France</span>
+      </div>
+    </div>
+
+    <!-- Intersection -->
+    <div class="pills">
+      <span class="pill">🔬 Science</span>
+      <span class="pill">📊 Data</span>
+      <span class="pill">🧠 AI</span>
+      <span class="pill">🛠 Engineering</span>
+    </div>
+
+    <!-- About -->
+    <section>
+      <h2>About</h2>
+      <p style="color: var(--muted); line-height: 1.8;">
+        My background is in <strong style="color: var(--text)">biophysics and quantitative imaging</strong>, where I worked on extracting meaningful signals from biological experiments using computational approaches. Over time I became increasingly interested in the engineering side of science: building reliable pipelines, automating analysis workflows, and turning research methods into reproducible software.
+      </p>
+    </section>
+
+    <!-- What I Build -->
+    <section>
+      <h2>What I enjoy building</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>🔬 Scientific Computing Tools</h3>
+          <p>Tools for data extraction and modeling.</p>
+        </div>
+        <div class="card">
+          <h3>🖼 Image Analysis & CV</h3>
+          <p>High-throughput microscopy and biological imaging pipelines.</p>
+        </div>
+        <div class="card">
+          <h3>🔄 Data Processing Workflows</h3>
+          <p>Robust, scalable research data pipelines.</p>
+        </div>
+        <div class="card">
+          <h3>🤖 AI-Assisted Research Tools</h3>
+          <p>Leveraging ML to accelerate discovery.</p>
+        </div>
+        <div class="card">
+          <h3>🧰 Developer Utilities</h3>
+          <p>Building for reproducible and open science.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section>
+      <h2>Technical stack</h2>
+      <div class="stack">
+        <span class="tag">Python</span>
+        <span class="tag">NumPy</span>
+        <span class="tag">SciPy</span>
+        <span class="tag">OpenCV</span>
+        <span class="tag">scikit-image</span>
+        <span class="tag">PyTorch</span>
+        <span class="tag">scikit-learn</span>
+        <span class="tag">Deep Learning</span>
+        <span class="tag">Git</span>
+        <span class="tag">CI/CD</span>
+        <span class="tag">Docker</span>
+      </div>
+    </section>
+
+    <!-- Current Interests -->
+    <section>
+      <h2>Current interests</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>🛰 Computational Imaging</h3>
+          <p>Pushing the limits of what we can see.</p>
+        </div>
+        <div class="card">
+          <h3>🧪 AI for Scientific Discovery</h3>
+          <p>Applying modern AI to complex biological problems.</p>
+        </div>
+        <div class="card">
+          <h3>🔧 Research Tooling</h3>
+          <p>Bridging the gap between code and experimental science.</p>
+        </div>
+        <div class="card">
+          <h3>⚙️ Automation</h3>
+          <p>Making scientific workflows more reliable and reproducible.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section>
+      <h2>Philosophy</h2>
+      <blockquote>
+        I enjoy turning ideas into working tools.<br />
+        Especially when those tools help researchers explore complex datasets and <strong>accelerate discovery</strong>.
+      </blockquote>
+    </section>
+
+    <!-- GitHub Stats -->
+    <section>
+      <h2>GitHub Stats</h2>
+      <div class="stats">
+        <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=weiykong&theme=github_dark" alt="GitHub Stats" />
+        <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=weiykong&theme=github_dark" alt="Top Languages" />
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
