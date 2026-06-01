@@ -1,57 +1,83 @@
 # Hi, I'm Weiyuan 👋
 
-### Scientist turned engineer interested in building tools to explore complex data.
+### Computer Vision, Scientific Imaging & Applied AI Engineer
+_PhD in biophysics · image analysis · quantitative microscopy · scientific software · AI-assisted workflows_
 
-My background is in **biophysics and quantitative imaging**, where I worked on extracting meaningful signals from biological experiments using computational approaches. Over time I became increasingly interested in the engineering side of science: building reliable pipelines, automating analysis workflows, and turning research methods into reproducible software.
+I build tools that turn complex scientific images into reliable, measurable data.
 
-Today I enjoy working at the intersection of:
+My background is in **biophysics and quantitative imaging**, where I worked on extracting mechanical and morphological information from microscopy experiments. Over time, I became increasingly interested in the engineering side of science: building robust pipelines, automating analysis workflows, validating results, and turning research methods into reusable software.
 
-🔬 **Science**  
-📊 **Data**  
-🧠 **AI**  
-🛠 **Engineering**
+Today, I work mainly at the intersection of:
 
----
-
-## 🛠 What I enjoy building
-
-- **Scientific Computing Tools** – Tools for data extraction and modeling.
-- **Image Analysis & Computer Vision** – High-throughput microscopy and biological imaging pipelines.
-- **Data Processing Workflows** – Robust, scalable research data pipelines.
-- **AI-Assisted Research Tools** – Leveraging ML to accelerate discovery.
-- **Developer Utilities** – Building for reproducible and open science.
+🤖 **Applied AI & automation**  
+🔬 **Scientific imaging**  
+👁️ **Computer vision**  
+📊 **Quantitative analysis**  
+🛠 **Reproducible software engineering**
 
 ---
 
-## 💻 Technical stack
+## Featured projects
 
-**Languages & Core:** Python · NumPy · SciPy · OpenCV · scikit-image  
-**Machine Learning:** PyTorch · scikit-learn · Deep Learning  
-**Engineering:** Git · CI/CD · Docker · Scientific computing & Automation
+### [`imgclean`](https://github.com/Weiykong/imgclean)
+Image dataset quality-control toolkit for computer vision workflows.  
+Detects duplicates, blur, corruption, exposure issues and train/validation leakage. Exports HTML, JSON and CSV reports.
+
+### [`ForceInferencePy`](https://github.com/Weiykong/ForceInferencePy)
+Scientific imaging package for extracting mechanical information from microscopy images.  
+Includes topology extraction, Bayesian force inference, curvature analysis and stress summaries.
+
+### [`CineDepthPro`](https://github.com/Weiykong/CineDepthPro)
+Android computational photography prototype combining monocular depth estimation with GPU-based bokeh rendering.
+
+### [`universal-unet-segmentation`](https://github.com/Weiykong/universal-unet-segmentation)
+Configurable PyTorch U-Net pipeline for biological image segmentation, with training, inference and validation examples.
 
 ---
 
-## 🛰 Current interests
-
-- **Computational Imaging** – Pushing the limits of what we can see.
-- **AI for Scientific Discovery** – Applying modern AI to complex biological problems.
-- **Research Tooling** – Bridging the gap between code and experimental science.
-- **Automation** – Making scientific workflows more reliable and reproducible.
+## What I enjoy building
+- **AI-assisted workflows** using LLMs, APIs and automation to make scientific and technical work faster
+- **Image analysis pipelines** for microscopy, biological imaging and visual datasets
+- **Computer vision tools** for segmentation, tracking, registration and quality control
+- **Scientific software** that turns research methods into reusable packages
+- **Data validation workflows** with clear reports and reproducible outputs
+- **AI-assisted tools** for scientific discovery and experimental analysis
 
 ---
 
-## 💡 Philosophy
+## Technical stack
 
-> I enjoy turning ideas into working tools.  
-> Especially when those tools help researchers explore complex datasets and accelerate discovery.
+**Languages:** Python · MATLAB · C++ · SQL  
+**Image analysis:** OpenCV · scikit-image · Fiji/ImageJ · segmentation · tracking · registration  
+**Machine learning:** PyTorch · TensorFlow · scikit-learn · U-Net · CLIP  
+**Scientific computing:** NumPy · SciPy · Pandas · modelling · optimization  
+**Engineering:** Git · Pytest · CI/CD · Docker · FastAPI · reproducible workflows
+
+---
+
+## Current interests
+
+- Scientific imaging and quantitative microscopy
+- Computer vision for biological and medical images
+- Dataset quality control before ML training
+- Inverse problems and physics-informed image analysis
+- Tools that make experimental data more reliable and easier to use
+
+---
+
+## Philosophy
+
+> Good scientific software should not only work once.  
+> It should be understandable, testable, reusable, and useful to someone else.
 
 ---
 
 📍 Strasbourg, France  
+🔗 [LinkedIn](https://www.linkedin.com/in/weiyuan-kong)
 
 ---
 
-## 📊 GitHub Stats
+## GitHub Stats
 
 <p align="left">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=weiykong&theme=default" height="150"/>
