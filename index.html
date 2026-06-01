@@ -48,13 +48,16 @@
       width: 96px;
       height: 96px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #1f6feb 0%, #3fb950 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 40px;
       flex-shrink: 0;
       border: 2px solid var(--border);
+      overflow: hidden;
+      position: relative;
+    }
+
+    #turing-canvas {
+      width: 96px;
+      height: 96px;
+      display: block;
     }
 
     .hero-text h1 {
@@ -207,7 +210,9 @@
 
     <!-- Hero -->
     <div class="hero">
-      <div class="avatar">🧬</div>
+      <div class="avatar">
+        <canvas id="turing-canvas" width="96" height="96"></canvas>
+      </div>
       <div class="hero-text">
         <h1>Weiyuan Kong</h1>
         <p class="tagline">Scientist turned engineer interested in building tools to explore complex data.</p>
@@ -318,5 +323,95 @@
     </section>
 
   </div>
+  <script>
+  (function () {
+    const canvas = document.getElementById('turing-canvas');
+    const ctx = canvas.getContext('2d');
+    const W = 96, H = 96;
+
+    // Gray-Scott parameters — "coral" pattern (spots + stripes)
+    const Du = 0.16, Dv = 0.08, F = 0.060, k = 0.062;
+    const dt = 1.0;
+
+    // Allocate two grids: u (activator), v (inhibitor)
+    let u  = new Float32Array(W * H);
+    let v  = new Float32Array(W * H);
+    let u2 = new Float32Array(W * H);
+    let v2 = new Float32Array(W * H);
+
+    // Init: u=1, v=0 everywhere
+    u.fill(1); v.fill(0);
+
+    // Seed "WK" region with v=1, u=0 using an offscreen canvas
+    const seed = document.createElement('canvas');
+    seed.width = W; seed.height = H;
+    const sc = seed.getContext('2d');
+    sc.fillStyle = '#000';
+    sc.fillRect(0, 0, W, H);
+    sc.fillStyle = '#fff';
+    sc.font = 'bold 44px sans-serif';
+    sc.textAlign = 'center';
+    sc.textBaseline = 'middle';
+    sc.fillText('WK', W / 2, H / 2);
+    const pix = sc.getImageData(0, 0, W, H).data;
+    for (let i = 0; i < W * H; i++) {
+      if (pix[i * 4] > 128) {   // white pixel → seed inhibitor
+        u[i] = 0.5 + 0.1 * (Math.random() - 0.5);
+        v[i] = 0.25 + 0.1 * (Math.random() - 0.5);
+      }
+    }
+
+    // Laplacian (5-point stencil, wrapping)
+    function idx(x, y) { return ((y + H) % H) * W + ((x + W) % W); }
+
+    function step() {
+      for (let y = 0; y < H; y++) {
+        for (let x = 0; x < W; x++) {
+          const i = y * W + x;
+          const ui = u[i], vi = v[i];
+          const lap_u = u[idx(x-1,y)] + u[idx(x+1,y)] + u[idx(x,y-1)] + u[idx(x,y+1)] - 4*ui;
+          const lap_v = v[idx(x-1,y)] + v[idx(x+1,y)] + v[idx(x,y-1)] + v[idx(x,y+1)] - 4*vi;
+          const uvv = ui * vi * vi;
+          u2[i] = ui + dt * (Du * lap_u - uvv + F * (1 - ui));
+          v2[i] = vi + dt * (Dv * lap_v + uvv - (F + k) * vi);
+        }
+      }
+      [u, u2] = [u2, u];
+      [v, v2] = [v2, v];
+    }
+
+    // Color map: dark blue → teal → white
+    function colorize(t) {
+      // t in [0,1]
+      const r = Math.min(255, t < 0.5 ? 0 : Math.round((t - 0.5) * 2 * 200 + 20));
+      const g = Math.round(t * 180);
+      const b = Math.round(255 - t * 100);
+      return [r, g, b];
+    }
+
+    function draw() {
+      const img = ctx.createImageData(W, H);
+      for (let i = 0; i < W * H; i++) {
+        const t = Math.max(0, Math.min(1, 1 - v[i] * 3));
+        const [r, g, b] = colorize(t);
+        img.data[i*4]   = r;
+        img.data[i*4+1] = g;
+        img.data[i*4+2] = b;
+        img.data[i*4+3] = 255;
+      }
+      ctx.putImageData(img, 0, 0);
+    }
+
+    let frame = 0;
+    function loop() {
+      // Run several steps per frame for faster convergence
+      for (let s = 0; s < 8; s++) step();
+      draw();
+      frame++;
+      if (frame < 300) requestAnimationFrame(loop);  // ~300 frames then freeze
+    }
+    loop();
+  })();
+  </script>
 </body>
 </html>
