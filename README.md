@@ -62,9 +62,9 @@ Today, I work mainly at the intersection of:
 ### 📈 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=weiykong&show_icons=true&theme=dark&bg_color=0d1117&title_color=2dd4bf&icon_color=2dd4bf&text_color=c9d1d9&border_color=30363d" height="150" alt="Weiyuan's GitHub Stats" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=weiykong&theme=github_dark" height="150" alt="Weiyuan's GitHub Stats" />
   &nbsp;&nbsp;
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=weiykong&layout=compact&theme=dark&bg_color=0d1117&title_color=2dd4bf&icon_color=2dd4bf&text_color=c9d1d9&border_color=30363d" height="150" alt="Top Languages" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=weiykong&theme=github_dark" height="150" alt="Top Languages" />
 </p>
 
 ---
