@@ -62,9 +62,17 @@ Today, I work mainly at the intersection of:
 ### 📈 GitHub Stats
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=weiykong&theme=github_dark" height="150" alt="Weiyuan's GitHub Stats" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=weiykong&theme=github_dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=weiykong&theme=default">
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=weiykong&theme=default" height="150" alt="Weiyuan's GitHub Stats" />
+  </picture>
   &nbsp;&nbsp;
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=weiykong&theme=github_dark" height="150" alt="Top Languages" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=weiykong&theme=github_dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=weiykong&theme=default">
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=weiykong&theme=default" height="150" alt="Top Languages" />
+  </picture>
 </p>
 
 ---
