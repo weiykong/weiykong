@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="banner.png" alt="Weiyuan Kong - Scientific Imaging & Applied AI" width="100%">
-</p>
-
 # Hi, I'm Weiyuan Kong 👋
 
 ### Computer Vision, Scientific Imaging & Applied AI Engineer
