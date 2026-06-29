@@ -63,9 +63,9 @@ Today, I work mainly at the intersection of:
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=weiykong&show_icons=true&theme=github_dark_dimmed&hide_border=true&border_radius=12&include_all_commits=true&count_private=true&hide_rank=true">
-    <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=weiykong&show_icons=true&theme=default&hide_border=true&border_radius=12&include_all_commits=true&count_private=true&hide_rank=true">
-    <img src="https://github-readme-stats.vercel.app/api?username=weiykong&show_icons=true&theme=default&hide_border=true&border_radius=12&include_all_commits=true&count_private=true&hide_rank=true" height="170" alt="Weiyuan's GitHub Stats" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=weiykong&theme=github_dark">
+    <source media="(prefers-color-scheme: light)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=weiykong&theme=default">
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=weiykong&theme=default" height="170" alt="Weiyuan's GitHub Stats" />
   </picture>
   &nbsp;&nbsp;
   <picture>
