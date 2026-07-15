@@ -71,12 +71,6 @@ Today, I work mainly at the intersection of:
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/weiykong/weiykong/main/profile-summary-card-output/github_dark/1-repos-per-language.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/weiykong/weiykong/main/profile-summary-card-output/default/1-repos-per-language.svg">
-    <img src="https://raw.githubusercontent.com/weiykong/weiykong/main/profile-summary-card-output/default/1-repos-per-language.svg" height="170" alt="Repos Per Language" />
-  </picture>
-  &nbsp;&nbsp;
-  <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/weiykong/weiykong/main/profile-summary-card-output/github_dark/3-stats.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/weiykong/weiykong/main/profile-summary-card-output/default/3-stats.svg">
     <img src="https://raw.githubusercontent.com/weiykong/weiykong/main/profile-summary-card-output/default/3-stats.svg" height="170" alt="Stats" />
